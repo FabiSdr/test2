@@ -9,6 +9,7 @@ namespace test2
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }
