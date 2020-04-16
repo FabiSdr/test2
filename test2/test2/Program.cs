@@ -11,15 +11,18 @@ namespace test2
     {
         static void Main(string[] args)
         {
-            Titel("Dies ist ein Test");
+            Titel("Dies ist ein Test", ConsoleColor.Blue);
+            Console.WriteLine("ttttt");
             Console.ReadKey();
         }
 
-        static void Titel(string titel)
+        static void Titel(string titel, ConsoleColor textfarbe)
         {
             int breite = Console.WindowWidth;
             int textlen = titel.Length;
+            ConsoleColor aktTextFarbe = Console.ForegroundColor; //Aktuelle DFarbe speichern
             Console.Clear();
+            Console.ForegroundColor = textfarbe;
             for (int i = 0; i < Console.WindowWidth; i++)
             {
                 Console.Write("*"); 
@@ -33,6 +36,7 @@ namespace test2
             {
                 Console.Write("*");
             }
+            Console.ForegroundColor = aktTextFarbe;
         }
     }
 }
