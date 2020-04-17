@@ -13,6 +13,7 @@ namespace test2
         {
             Titel("Dies ist ein Test", ConsoleColor.Blue);
             Console.WriteLine("ttttt");
+            Menu();
             Console.ReadKey();
         }
 
@@ -37,6 +38,16 @@ namespace test2
                 Console.Write("*");
             }
             Console.ForegroundColor = aktTextFarbe;
+        }
+        /// <summary>
+        /// Ausgabe eines Auswahlmenüs
+        /// </summary>
+        static void Menu()
+        {
+            Console.WriteLine("1) 10 -> 2");
+            Console.WriteLine("2) 10 -> HEX");
+            Console.WriteLine("1) 2 -> 10");
+            Console.WriteLine("\n Bitte einen Menüpunkt auswählen");
         }
     }
 }
